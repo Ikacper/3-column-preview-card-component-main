@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.column-list {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  text-align: left;
+}
+
+.column__sedans {
+  background-color: var(--Bright-orange);
+  color: var(--Bright-orange);
+  padding: 2.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.column__sedans::before {
+  content: url(./images/icon-sedans.svg);
+}
+
+.column__suvs {
+  background-color: var(--Dark-cyan);
+  color: var(--Dark-cyan);
+  padding: 2.5rem;
+}
+
+.column__suvs::before {
+  content: url(./images/icon-suvs.svg);
+}
+
+.column__luxury {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-dark-cyan);
+  padding: 2.5rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.column__luxury::before {
+  content: url(./images/icon-luxury.svg);
+}
+
+.heading {
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 2rem 0;
+}
+
+.paragraph {
+  color: var(--Transparent-white);
+  max-width: 24rem;
+}
+
+.btn {
+  background-color: var(--Very-light-gray);
+  color: inherit;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 36px;
+  border: 2px solid transparent;
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--Very-light-gray);
+  color: var(--Very-light-gray);
+  cursor: pointer;
+}
+
+@media (min-width: 775px) {
+  body {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .column-list {
+    flex-direction: row;
+  }
+
+  .column__sedans {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .column__luxury {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+  }
+
+  .paragraph {
+    height: 12rem;
+  }
+
+  .btn {
+    margin-top: 0;
+  }
+}
