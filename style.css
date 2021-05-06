@@ -19,9 +19,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .column-list {
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,37 +31,38 @@ body {
   text-align: left;
 }
 
-.column__sedans {
+.column {
+  padding: 2.5rem;
+}
+
+.column--sedans {
   background-color: var(--Bright-orange);
   color: var(--Bright-orange);
-  padding: 2.5rem;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
-.column__sedans::before {
+.column--sedans::before {
   content: url(./images/icon-sedans.svg);
 }
 
-.column__suvs {
+.column--suvs {
   background-color: var(--Dark-cyan);
   color: var(--Dark-cyan);
-  padding: 2.5rem;
 }
 
-.column__suvs::before {
+.column--suvs::before {
   content: url(./images/icon-suvs.svg);
 }
 
-.column__luxury {
+.column--luxury {
   background-color: var(--Very-dark-cyan);
   color: var(--Very-dark-cyan);
-  padding: 2.5rem;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-.column__luxury::before {
+.column--luxury::before {
   content: url(./images/icon-luxury.svg);
 }
 
@@ -103,16 +106,17 @@ body {
   }
 
   .column-list {
+    max-width: 60rem;
     flex-direction: row;
     width: 61%;
   }
 
-  .column__sedans {
+  .column--sedans {
     border-top-right-radius: 0px;
     border-bottom-left-radius: 8px;
   }
 
-  .column__luxury {
+  .column--luxury {
     border-bottom-left-radius: 0px;
     border-top-right-radius: 8px;
   }
